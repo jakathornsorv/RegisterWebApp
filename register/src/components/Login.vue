@@ -85,10 +85,10 @@ const loginGuest = () => {
 </script>
 <template>
   <div class="full-page">
-    <div class="box-center">
+    <div class="box-center bg-black">
       <div class="form-container">
         <div class="title">
-          <div class="mt-5 text-2xl font-bold text-slate-950">ลงชื่อเข้าใช้</div>
+          <div class="mt-5 text-5xl text-white">Sign in</div>
         </div>
         <div class="form">
           <label class="input input-bordered flex items-center gap-2 m-2">
@@ -104,13 +104,15 @@ const loginGuest = () => {
           </label>
 
           <div class="buttons">
-            <button class="btn btn-outline btn-accent mr-5" @click="loginUser">
-              Login
-            </button>
-            <button class="btn btn-outline btn-accent mr-5" @click="loginGuest()">
+            <button type="button" class="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-full border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" @click="loginGuest()">
               Guest
             </button>
-            <button class="btn" onclick="my_modal_1.showModal()">Register</button>
+            <button type="button" class="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-full border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" onclick="my_modal_1.showModal()">
+              Register
+            </button>
+            <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" @click="loginUser()">
+              Login
+            </button>
           </div>
         </div>
       </div>
@@ -156,16 +158,18 @@ const loginGuest = () => {
   justify-content: center;
   align-items: center;
   background-color: #2d2f30;
+  
 }
 
 .box-center {
   width: 50%;
-  height: auto;
+  height: 35%;
   padding: 40px;
-  background-color: #ffffff;
+  background-color: #000000;
   border-radius: 20px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
   display: flex;
+
 }
 
 .form-container {
@@ -192,10 +196,19 @@ const loginGuest = () => {
   display: flex;
   justify-content: center;
   margin-top: 20px;
+  justify-content: flex-end;
 }
 
 .modal-box {
   max-width: 400px;
+}
+
+.title {
+  width: 30%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start; 
+  margin-bottom: 20px; 
 }
 
 </style>
