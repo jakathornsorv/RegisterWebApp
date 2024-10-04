@@ -107,7 +107,7 @@ const sendConfirmationEmail = async (email) => {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #2a2929;
+    background-color: #474747;
 }
 
 .form-vertical {
